@@ -1,13 +1,4 @@
-# Aula Exemplo Arquitetura SOA com Docker e k8s
-Disciplina de Sistemas Distribuídos
-
-
-## Recursos da Arquitetura construida:
-[x] Service Discovery com Consul
-[x] Circuit Breaker no API Gateway
-[x] Kafka para comunicação assíncrona
-[x] Prometheus para monitoramento
-[x] Docker e/ou Kubernetes para orquestração
+# Aplicação De Postagens em arquitetura SOA
 
 ## Como executar:
 
@@ -21,25 +12,25 @@ scripts\install-dependencies.bat
 
 Executar Docker
 ```bash
-# inicialização completa
+# inicialização completa(Realiza todos os scripts de uma vez)
 scripts\start-complete.bat
 ```
 ```bash
 # passo a passo
-# Iniciar infraestrutura
+# Cria as imagens e containers no Docker
 scripts\start-docker.bat
 
-# Aguardar serviços e criar tópicos Kafka
+# Verifica se os serviços estão prontos e cria tópicos no kafka
 scripts\wait-for-services.bat
 scripts\create-kafka-topics.bat
 
-# Testar API
+# Realiza teste das rotas da API
 scripts\test-api.bat
 
-# Configurar monitoramento
+# Configura monitoramento com Prometheus e Grafana
 scripts\monitoring-setup.bat
 
-# Abrir interfaces
+# Abre interfaces do Consul e Grafana no Navegador
 scripts\monitor.bat
 ```
 
@@ -50,24 +41,24 @@ scripts/port-forward.bat
 scripts/test-api.bat
 ```
 
-Utilitários
+Alguns scripts úteis
 ```bash
-# Ver status completo
+# Verifica o status completo dos serviços
 scripts\check-services.bat
 scripts\health-check.bat
 
-# Verificar métricas e monitoramento
+# Verificar As métricas
 scripts\check-metrics.bat
 scripts\check-kafka.bat
 
-# Parar tudo
+# Para o projeto, apagando os containers
 scripts\stop-docker.bat
 scripts\delete-k8s.bat
 
 # Limpar ambiente completamente
 scripts\cleanup.bat
 
-# Reiniciar serviços
+# Reinicia os serviços
 scripts\restart-docker.bat
 ```
 
