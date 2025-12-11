@@ -1,5 +1,7 @@
 # Aplicação De Postagens em arquitetura SOA
 
+Esta é uma aplicação de criação e vizualização de posts, onde os usuários podem realizar um cadastro, ou logar em uma conta existente, e realizar e vizualizar suas postagens
+
 ## Como executar:
 
 #### Windows:
